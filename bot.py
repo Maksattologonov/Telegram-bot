@@ -1,7 +1,9 @@
+# - *- coding: utf- 8 - *-
 import datetime
 import telebot
+import config
 
-bot = telebot.TeleBot('1698248948:AAFKHSb-CKb-x7_U-rNha8bGDTQYmc4PfYg');
+bot = telebot.TeleBot(config.token)
 
 
 @bot.message_handler(content_types=['text'])
@@ -134,6 +136,5 @@ def start(message):
         bot.send_message(message.chat.id, "Ауф")
 
 
-bot.polling(none_stop=True, interval=0)
+bot.polling(none_stop=True)
 
-bot.polling(none_stop=True, interval=0)
